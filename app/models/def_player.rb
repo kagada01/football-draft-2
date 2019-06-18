@@ -1,0 +1,2 @@
+class DefPlayer < Player
+end

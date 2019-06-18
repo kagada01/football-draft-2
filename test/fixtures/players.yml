@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hometown: MyString
+  college: MyString
+  available: false
+  nfl_team: MyString
+  type: 
+  position: MyString
+  sacks: 1
+  def_interceptions: 1
+  tackles: 1
+  fumble_rec: 1
+  tds: 1
+  rush_yds: 1
+  receptions: 1
+  pass_yds: 1
+  off_int: 1
+  fumbles: 1
+  my_team_id: 1
+
+two:
+  name: MyString
+  hometown: MyString
+  college: MyString
+  available: false
+  nfl_team: MyString
+  type: 
+  position: MyString
+  sacks: 1
+  def_interceptions: 1
+  tackles: 1
+  fumble_rec: 1
+  tds: 1
+  rush_yds: 1
+  receptions: 1
+  pass_yds: 1
+  off_int: 1
+  fumbles: 1
+  my_team_id: 1

@@ -16,7 +16,7 @@ user_2 = User.create!(username: "kagada01", password: "pw2")
 user_3 = User.create!(username: "testguy01", password: "pw3")
 
 team_1 = MyTeam.create!(team_name: "SahNoNoNoLosses", user_id: user_1.id)
-team_2 = MyTeam.create!(team_name: "passtheblount", user_id: user_2.id)
+team_2 = MyTeam.create!(team_name: "gopats", user_id: user_2.id)
 # byebug
 d_player_1 = DefPlayer.create!(name: "Patrick Peterson", hometown: "Fort Lauterdale, FL",
   college: "LSU", available: true, nfl_team: "Arizona Cardinals", position: "CB", sacks: 10,
@@ -37,6 +37,9 @@ o_player_2 = OffPlayer.create!(name: "Cam Newton", hometown: "Atlanta, GA",
 o_player_3 = OffPlayer.create!(name: "LeGarrette Blount", hometown: "Madison, FL",
   college: "Oregon", available: true, nfl_team: "Detroit Lions", position: "RB",
   tds: 20, rush_yds: 2000, receptions: 6, pass_yds: 0, off_int: 0, fumbles: 10, my_team_id: team_1.id)
+o_player_4 = OffPlayer.create!(name: "Saquon Barkley", hometown: "Bronx, NY",
+    college: "Penn State", available: false, nfl_team: "New York Giants", position: "RB",
+    tds: 11, rush_yds: 1307, receptions: 91, pass_yds: 0, off_int: 0, fumbles: 10, my_team_id: team_1.id)
 
 league_1 = League.create!(league_name: "Champions League")
 league_2 = League.create!(league_name: "Somali Cup")

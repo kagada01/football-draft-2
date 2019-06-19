@@ -3,5 +3,5 @@ class User < ApplicationRecord
 
   has_many :league_users
   has_many :leagues, through: :league_users
-  has_many :my_teams
+  has_one :my_team
 end

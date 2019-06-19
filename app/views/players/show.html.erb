@@ -1,1 +1,28 @@
-<h1><%= @player.name %></h1>
+<h1><%= @player.name %> (<%= @player.position %>)</h1>
+
+<% if @player.available == true %>
+  <%= submit_tag "Add to Team" %>
+<% else %>
+  <%= "This player has already been selected" %>
+<% end %><br>
+<br>
+<%= link_to "All Players", players_path %>
+
+<h2>College: </h3><%= @player.college %>
+<h2>Team: </h3><%= @player.nfl_team %>
+
+<% if @player.type == "OffPlayer"  %>
+  <h3>Touchdowns: </h3><%= @player.tds %>
+  <h3>Receptions:</h3><%= @player.receptions %>
+  <% if @player.position == "QB" %>
+    <h3>Passing Yards:</h3><%= @player.pass_yds %>
+    <h3>Interceptions:</h3><%= @player.off_int %>
+  <% end %>
+    <h3>Rush Yards:</h3><%= @player.rush_yds %>
+    <h3>Fumbles:</h3><%= @player.fumbles %>
+<% else %>
+  <h3>Tackles: </h3> <%= @player.tackles %>
+  <h3>Sacks: </h3><%= @player.sacks %>
+  <h3>Fumble Recoveries: </h3><%= @player.fumble_rec %>
+  <h3>Interceptions:</h3><%= @player.def_interceptions %>
+<% end %>

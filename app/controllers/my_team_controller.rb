@@ -1,9 +1,11 @@
 class MyTeamController < ApplicationController
-    def index
+  def index
       @my_team = MyTeam.first
+  end 
+
+
       #need to use a different method for selecting my team
       #need to figure out how to do the relationships with My_Team & User
-    end
 
   #Index has everyone on My_Team listed
   #Skateboard: You get added by clicking "Add To Team" button on Player/views/show.html.erb
@@ -15,19 +17,9 @@ class MyTeamController < ApplicationController
     ##if we ge this on the My_Team page, we'll want to show it on Players#index
 
     def destroy
-      @my_team
+      @my_team.destroy 
+      redirect_to "Login", login_path 
     end
 
-    def my_players 
-
-     @my_players =  @players.select do |player|
-      byebug 
-        player.my_team_id.user_id == @user.id
-       
-
-
-        end 
-
-     end 
-
-end
+  
+end 

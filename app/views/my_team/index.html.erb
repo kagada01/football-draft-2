@@ -4,8 +4,16 @@ Welcome!<br>
 
 <%= link_to "All Players", players_path %>
 
-<% @my_players%>
+<h2> Team Name: <%= @my_team.team_name %> </h2> 
 
-<h2>Team Name: </h2> <%= @my_team.team_name %>
 
-<h2> My Players: </h2>
+
+<h2> My Players: </h2> 
+<% @my_team.players.each do |player| %> 
+
+	<h2><%= player.name %></h2> 
+
+	<%= submit_tag "Drop Player" %> 
+
+
+<%end%>

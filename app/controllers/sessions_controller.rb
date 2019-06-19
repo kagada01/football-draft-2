@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-
   end
 
   def create
@@ -18,5 +17,7 @@ class SessionsController < ApplicationController
   	session.clear 
   	redirect_to login_path 
   end  
+
+
 
 end

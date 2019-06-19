@@ -18,4 +18,16 @@ class MyTeamController < ApplicationController
       @my_team
     end
 
+    def my_players 
+
+     @my_players =  @players.select do |player|
+      byebug 
+        player.my_team_id.user_id == @user.id
+       
+
+
+        end 
+
+     end 
+
 end

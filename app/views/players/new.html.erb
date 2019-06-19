@@ -1,0 +1,47 @@
+<%= form_for @player do |f| %>
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %>
+
+	<%= f.label :hometown, "Hometown" %>
+	<%= f.text_field :hometown %>
+
+	<%= f.label :college, "College" %>
+	<%= f.text_field :college %>
+
+	<%= f.label :nfl_team, "NFL Team" %>
+	<%= f.text_field :nfl_team %>
+
+	<%= f.label :position, "Position" %>
+	<%= f.text_field :position %>
+
+	<%= f.label :sacks, "Sacks" %>
+	<%= f.text_field :sacks %>
+
+	<%= f.label :def_interceptions, "Defensive Interceptions" %>
+	<%= f.text_field :def_interceptions %>
+
+	<%= f.label :tackles, "Tackles" %>
+	<%= f.text_field :tackles %>
+
+	<%= f.label :fumble_rec, "Fumble Recoveries" %>
+	<%= f.text_field :fumble_rec %>
+
+	<%= f.label :tds, "Touchdowns" %>
+	<%= f.text_field :tds %>
+
+	<%= f.label :rush_yds, "Rush Yards" %>
+	<%= f.text_field :rush_yds %>
+
+	<%= f.label :receptions, "Receptions" %>
+	<%= f.text_field :receptions %>
+
+	<%= f.label :pass_yds, "Pass Yards" %>
+	<%= f.text_field :pass_yds %>
+
+	<%= f.label :off_int, "Offensive Interceptions" %>
+	<%= f.text_field :off_int %>
+
+	<%= f.label :fumbles, "Fumbles" %>
+	<%= f.text_field :fumbles %>
+	<%= f.submit "Submit" %>
+<%end%>

@@ -9,7 +9,9 @@ class PlayersController < ApplicationController
   end
 
   def draft 
-  	byebug
+  	@player = Player.find(params[:id])
+  	@player.update(available: params[:player][:available], my_team_id: params[:player][:my_team_id])
+  	redirect_to my_team_path(@self.my_team_id)
   end 
 
 

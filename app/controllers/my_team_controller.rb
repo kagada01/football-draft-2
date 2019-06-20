@@ -1,25 +1,26 @@
 class MyTeamController < ApplicationController
   def index
-      @my_team = MyTeam.first
-  end 
+      @user_id = session["user_id"]
+      @my_team = MyTeam.find_by(user_id: @user_id)
+  end
+
+  def new
+    @my_team = MyTeam.new
+  end
+
+  def create
+    @my_team = MyTeam.find(params[:team_name])
+    @my_team.user_id = session["user_id"]
+    @my_team.save
+    redirect_to my_team_path
+  end
+
+  def destroy
+    @my_team.destroy
+    redirect_to "Login", login_path
+  end
 
 
-      #need to use a different method for selecting my team
-      #need to figure out how to do the relationships with My_Team & User
 
-  #Index has everyone on My_Team listed
-  #Skateboard: You get added by clicking "Add To Team" button on Player/views/show.html.erb
 
-  #Skateboard: Tells you how many players on your team (at the top)
-    #Stretch: Tells you what positions are left that you need to fill***
-    ## "You still need a QB, RB, CB" (we can limit this to just offensive players, just a matter of seed data)
-    ##This will require logic for checking that each position is present
-    ##if we ge this on the My_Team page, we'll want to show it on Players#index
-
-    def destroy
-      @my_team.destroy 
-      redirect_to "Login", login_path 
-    end
-
-  
-end 
+end

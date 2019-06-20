@@ -1,3 +1,3 @@
 class Player < ApplicationRecord
-  belongs_to :my_team
+  belongs_to :my_team, required: false
 end

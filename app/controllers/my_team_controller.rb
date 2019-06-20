@@ -16,6 +16,21 @@ class MyTeamController < ApplicationController
     ##This will require logic for checking that each position is present
     ##if we ge this on the My_Team page, we'll want to show it on Players#index
 
+
+       #Goal: Be able to drop a player. I.E. dissasociate the player with the user, and change available to true 
+
+    def drop 
+
+    end 
+
+    #Goal: Be able to add a player, I.E. associate the player with the user, and change available to false
+
+    def add 
+
+      #The button click results in changes in player attributes. 
+
+    end 
+
     def destroy
       @my_team.destroy 
       redirect_to "Login", login_path 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  patch "/players/:id", to: "players#draft", as: "draft"
   get "/login", to: "sessions#new", as: "login" 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy", as: "logout"

@@ -8,11 +8,10 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
   end
 
-def add_player 
-end 
+  def draft 
+  	byebug
+  end 
 
- def drop_player 
- end 
 
 
 

@@ -20,23 +20,23 @@ team_2 = MyTeam.create!(team_name: "gopats", user_id: user_2.id)
 # byebug
 d_player_1 = DefPlayer.create!(name: "Patrick Peterson", hometown: "Fort Lauterdale, FL",
   college: "LSU", available: true, nfl_team: "Arizona Cardinals", position: "CB", sacks: 10,
-  def_interceptions: 5, tackles: 90, fumble_rec: 2, my_team_id: team_1.id)
+  def_interceptions: 5, tackles: 90, fumble_rec: 2, my_team_id: nil)
 d_player_2 = DefPlayer.create!(name: "Derek Brooks", hometown: "Pensacola, FL",
   college: "FSU", available: true, nfl_team: "Tampa Bay Bucaneers", position: "DB",
-  sacks: 5, def_interceptions: 4, tackles: 100, fumble_rec: 1, my_team_id: team_2.id)
+  sacks: 5, def_interceptions: 4, tackles: 100, fumble_rec: 1, my_team_id: nil)
 d_player_3 = DefPlayer.create!(name: "Jalen Ramsey", hometown: "Smyrna, TN",
   college: "FSU", available: true, nfl_team: "Jacksonville Jaguars", position: "CB",
-  sacks: 14, def_interceptions: 9, tackles: 110, fumble_rec: 4, my_team_id: team_1.id)
+  sacks: 14, def_interceptions: 9, tackles: 110, fumble_rec: 4, my_team_id: nil)
 
 o_player_1 = OffPlayer.create!(name: "Julian Edelman", hometown: "Redwood City, CA",
   college: "Kent State", available: true, nfl_team: "New England Patriots", position: "WR",
-  tds: 9, rush_yds: 100, receptions: 8, pass_yds: 0, off_int: 0, fumbles: 2, my_team_id: team_1.id)
+  tds: 9, rush_yds: 100, receptions: 8, pass_yds: 0, off_int: 0, fumbles: 2, my_team_id: nil)
 o_player_2 = OffPlayer.create!(name: "Cam Newton", hometown: "Atlanta, GA",
   college: "Auburn", available: true, nfl_team: "Carolina Panthers", position: "QB",
-  tds: 30, rush_yds: 300, receptions: 0, pass_yds: 3000, off_int: 20, fumbles: 1, my_team_id: team_2.id)
+  tds: 30, rush_yds: 300, receptions: 0, pass_yds: 3000, off_int: 20, fumbles: 1, my_team_id: nil)
 o_player_3 = OffPlayer.create!(name: "LeGarrette Blount", hometown: "Madison, FL",
   college: "Oregon", available: true, nfl_team: "Detroit Lions", position: "RB",
-  tds: 20, rush_yds: 2000, receptions: 6, pass_yds: 0, off_int: 0, fumbles: 10, my_team_id: team_1.id)
+  tds: 20, rush_yds: 2000, receptions: 6, pass_yds: 0, off_int: 0, fumbles: 10, my_team_id: nil)
 o_player_4 = OffPlayer.create!(name: "Saquon Barkley", hometown: "Bronx, NY",
     college: "Penn State", available: true, nfl_team: "New York Giants", position: "RB",
     tds: 11, rush_yds: 1307, receptions: 91, pass_yds: 0, off_int: 0, fumbles: 10, my_team_id: nil)

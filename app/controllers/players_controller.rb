@@ -10,8 +10,12 @@ class PlayersController < ApplicationController
 
   def draft 
   	@player = Player.find(params[:id])
-  	@player.update(available: params[:player][:available], my_team_id: params[:player][:my_team_id])
-  	redirect_to my_team_path(@self.my_team_id)
+    @user_id = session["user_id"]
+    @my_team = MyTeam.find_by(user_id: @user_id)
+  	@player.available = false 
+    @player.my_team_id = @my_team.id
+    @player.save
+  	redirect_to my_team_path(@my_team)
   end 
 
 

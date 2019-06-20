@@ -9,8 +9,8 @@ Welcome!<br>
 
 
 <h2> My Players: </h2> 
-<% @my_team.players.each do |player| %> 
-
+<% Player.all.select do |player| %> 
+	<%byebug%>
 	<h2><%= player.name %></h2> 
 
 	<%= submit_tag "Drop Player" %> 

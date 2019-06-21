@@ -10,8 +10,8 @@ class MyTeamsController < ApplicationController
   end
 
   def create
-    @my_team = MyTeam.new
-    @my_team.team_name = params["my_team"]["team_name"]
+   
+    @my_team = MyTeam.new(my_team_params)
     @my_team.user_id = session["user_id"]
     @my_team.save
     redirect_to my_teams_path(@my_team)
@@ -21,6 +21,12 @@ class MyTeamsController < ApplicationController
     @my_team.destroy
     redirect_to "Login", login_path
   end
+
+  private 
+
+  def my_team_params
+    params.require(:my_team).permit(:team_name)
+  end 
 
 end 
 

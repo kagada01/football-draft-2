@@ -11,11 +11,15 @@
 
   <body>
     <%if session["user_id"]%>
-    <div>Welcome User</div>
-    <%= link_to "Logout", logout_path, method: "DELETE" %>
+        <div>Logged in as: <%= User.find(session["user_id"]).username %> </div>
+          <%= link_to "Logout", logout_path, method: "DELETE" %>
+          <%= link_to "My Team", my_teams_path %>
+          <%= link_to "All Players", players_path %>
+         
     <%else%>
-    <%= link_to "Login", login_path %>
+        <%= link_to "Login", login_path %>
     <%end%>
+
     <%= yield %>
   </body>
 </html>

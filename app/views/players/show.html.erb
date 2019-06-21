@@ -1,7 +1,7 @@
 <h1><%= @player.name %> (<%= @player.position %>)</h1>
 
 <% if @player.available == true %>
-  <%= submit_tag "Add to Team" %>
+<%= link_to "Draft", draft_path(@player), method: :patch %>
 <% else %>
   <%= "This player has already been selected" %>
 <% end %><br>

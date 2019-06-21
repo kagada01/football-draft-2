@@ -17,7 +17,6 @@ class PlayersController < ApplicationController
       redirect_to my_teams_path(@my_team)
     else
       @player.available = false
-      # byebug
       @player.my_team_id = @my_team.id
       @player.save
       redirect_to my_teams_path(@my_team)

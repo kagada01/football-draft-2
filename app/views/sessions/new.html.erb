@@ -1,5 +1,5 @@
  <h1>Login</h1>
- <%= form_for "/login" do %>
+ <%= form_for("/login", html: {class: "ui form"}) do  %>
 
       <%= label :username, "username" %>
       <%= text_field_tag :username %>

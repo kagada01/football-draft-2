@@ -1,6 +1,6 @@
 <h1>Create a team!</h1>
 
-<%= form_for @my_team, url: {action: "create"} do |f| %>
+<%= form_for(@my_team, url: {action: "create"}, html: {class: "ui form"}) do |f| %>
 	<%= f.label :team_name, "Team Name" %>
 	<%= f.text_field :team_name %>
 	<%= f.submit "Submit" %>

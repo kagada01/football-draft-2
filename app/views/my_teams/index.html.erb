@@ -9,7 +9,7 @@
 			<h2> Roster: </h2>
 			<% Player.all.select do |player| %>
 				<% if player.my_team_id == @my_team.id %>
-					<h2><%= link_to player.name, player_path(player) %></h2>
+					<h2><%= link_to player.name, player_path(player)%> (<%=player.position%>)</h2>
 					<%= form_tag(drop_path(player.id), method: :patch) do %>
 					<%= submit_tag "Drop Player" %>
 				  <% end %>

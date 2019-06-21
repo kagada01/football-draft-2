@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post "/users/new", to: "users#create" 
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#destroy", as: "logout_main"
   delete "/logout", to: "sessions#destroy", as: "logout" 
   patch "/players/:id", to: "players#draft", as: "draft"
   patch "/my_teams/:id", to: "my_teams#drop", as: "drop"

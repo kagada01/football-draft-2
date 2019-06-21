@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+#logged_in {
+	color: white;
+}
+
+h1 {
+
+	color: #428769;
+
+}
+

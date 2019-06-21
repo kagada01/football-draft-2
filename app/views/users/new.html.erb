@@ -6,7 +6,7 @@
     <br>
  <%end%>
 
- <%= form_for "/users" do %>
+ <%= form_for("/users", html: {class: "ui form"})do %>
 
       <%= label :username, "username" %>
       <%= text_field_tag :username %>

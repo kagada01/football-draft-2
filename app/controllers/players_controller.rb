@@ -14,13 +14,13 @@ class PlayersController < ApplicationController
     @my_team = MyTeam.find_by(user_id: @user_id)
 
     if @my_team == nil
-      redirect_to my_team_path(@my_team)
+      redirect_to my_teams_path(@my_team)
     else
       @player.available = false
       # byebug
       @player.my_team_id = @my_team.id
       @player.save
-      redirect_to my_team_path(@my_team)
+      redirect_to my_teams_path(@my_team)
     end
   end
 

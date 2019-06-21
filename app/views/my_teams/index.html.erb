@@ -1,0 +1,20 @@
+<h1>My Team</h1>
+
+Welcome!<br>
+
+<%= link_to "All Players", players_path %><br>
+<% if @my_team == nil %>
+		<%= "Please create a team"%>
+		<%= link_to "Create Team", new_team_path(@my_team)%>
+		<% else %>
+			<h2> Team Name: <%= @my_team.team_name %> </h2>
+			<h2> My Players: </h2>
+			<% Player.all.select do |player| %>
+				<% if player.my_team_id == @my_team.id %>
+					<h2><%= player.name %></h2>
+					<%= form_tag(drop_path(player.id), method: :patch) do %>
+					<%= submit_tag "Drop Player" %>
+				  <% end %>
+			<% end %>
+ 		<% end %>
+<% end %>

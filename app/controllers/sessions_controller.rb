@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  
   def new
   end
 
@@ -6,7 +7,7 @@ class SessionsController < ApplicationController
   	@user = User.find_by(username: params[:username])
   	if @user
   		session[:user_id] = @user.id
-  		redirect_to my_team_path
+  		redirect_to my_teams_path
   	else
   		flash.notice = "No user found with that username"
   		render :new
@@ -17,6 +18,4 @@ class SessionsController < ApplicationController
   	session.clear
   	redirect_to login_path
   end
-
-
 end

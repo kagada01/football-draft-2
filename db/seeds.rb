@@ -14,6 +14,10 @@ User.destroy_all
 user_1 = User.create!(username: "2daysweb", password: "pw1")
 user_2 = User.create!(username: "kagada01", password: "pw2")
 user_3 = User.create!(username: "testguy01", password: "pw3")
+user_4 = User.create!(username: "hero", password: "pw4")
+user_5 = User.create!(username: "hero1", password: "pw5")
+user_6 = User.create!(username: "hero2", password: "pw6")
+user_7 = User.create!(username: "hero3", password: "pw7")
 
 team_1 = MyTeam.create!(team_name: "SahNoNoNoLosses", user_id: user_1.id)
 team_2 = MyTeam.create!(team_name: "gopats", user_id: user_2.id)

@@ -2,7 +2,6 @@ class MyTeamsController < ApplicationController
   
   def index
       @user_id = session["user_id"]
-      byebug 
       @username = User.find(@user_id).username
       @my_team = MyTeam.find_by(user_id: @user_id)
   end
